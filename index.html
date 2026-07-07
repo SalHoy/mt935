@@ -1,4 +1,5 @@
-class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +19,6 @@ class="scroll-smooth">
     <!-- AOS Animation Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Swiper Slider CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -118,12 +116,45 @@ class="scroll-smooth">
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            transition: all 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+            background-color: #128C7E;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
     </style>
     
     <!-- Lucide Icons Library -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-brand-light text-slate-800 antialiased selection:bg-brand-green selection:text-white">
+<body class="bg-brand-light text-slate-800 antialiased selection:bg-brand-cyan selection:text-white">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 glass" style="background: rgba(10, 37, 64, 0.95);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,8 +170,7 @@ class="scroll-smooth">
                     <a href="#modelo" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Modelo</a>
                     <a href="#programas" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Programas</a>
                     <a href="#multiplicacion" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Multiplicación</a>
-                    <a href="#impacto" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Impacto</a>
-                    <a href="#participa" class="bg-brand-red hover:bg-red-700 text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-red-500/30">
+                    <a href="https://wa.me/573052908325" target="_blank" class="bg-brand-red hover:bg-red-700 text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-red-500/30">
                         Únete Hoy
                     </a>
                 </div>
@@ -155,23 +185,23 @@ class="scroll-smooth">
         </div>
         
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-blue border-t border-gray-700/50 absolute w-full left-0 top-full shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700/50 absolute w-full left-0 top-full shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="#nosotros" class="block px-3 py-3 text-base font-medium text-white hover:bg-gray-800 rounded-md">Ministerio</a>
                 <a href="#modelo" class="block px-3 py-3 text-base font-medium text-white hover:bg-gray-800 rounded-md">Modelo</a>
                 <a href="#programas" class="block px-3 py-3 text-base font-medium text-white hover:bg-gray-800 rounded-md">Programas</a>
-                <a href="#participa" class="block px-3 py-3 text-base font-medium text-white hover:bg-gray-800 rounded-md">Multiplicación</a>
-                <a href="#participa" class="block px-3 py-3 text-base font-bold text-brand-cyan mt-4">Únete al Movimiento</a>
+                <a href="#multiplicacion" class="block px-3 py-3 text-base font-medium text-white hover:bg-gray-800 rounded-md">Multiplicación</a>
+                <a href="https://wa.me/573052908325" target="_blank" class="block px-3 py-3 text-base font-bold text-brand-cyan mt-4">Únete al Movimiento</a>
             </div>
         </div>
     </nav>
 
     <header id="inicio" class="relative min-h-screen flex items-center justify-center bg-hero-pattern parallax-bg">
         <!-- Overlay subtle gradient -->
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-blue via-transparent to-transparent opacity-80"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80"></div>
         
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-            <span data-aos="fade-down" class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 border border-brand-gold/50 text-brand-gold text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
+            <span data-aos="fade-down" class="inline-block py-1 px-3 rounded-full bg-brand-teal/20 border border-brand-cyan/50 text-brand-cyan text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
                 UN MOVIMIENTO DE MULTIPLICACIÓN
             </span>
             <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white leading-tight mb-6">
@@ -186,7 +216,7 @@ class="scroll-smooth">
                     Conoce la Visión
                     <i data-lucide="arrow-down" class="w-4 h-4"></i>
                 </a>
-                <a href="#participa" class="bg-brand-red text-white hover:bg-red-700 px-8 py-4 rounded-full font-semibold transition-all transform hover:-translate-y-1 shadow-lg shadow-red-500/30 flex items-center justify-center gap-2">
+                <a href="https://wa.me/573052908325" target="_blank" class="bg-brand-red text-white hover:bg-red-700 px-8 py-4 rounded-full font-semibold transition-all transform hover:-translate-y-1 shadow-lg shadow-red-500/30 flex items-center justify-center gap-2">
                     Únete al Movimiento
                     <i data-lucide="users" class="w-4 h-4"></i>
                 </a>
@@ -201,8 +231,8 @@ class="scroll-smooth">
 
     <section id="nosotros" class="py-24 bg-white relative overflow-hidden">
         <!-- Abstract shape decoration -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-green/5 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-blue/5 blur-3xl"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-cyan/5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-teal/5 blur-3xl"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -222,11 +252,11 @@ class="scroll-smooth">
 
                 <!-- Text Content -->
                 <div data-aos="fade-left">
-                    <h2 class="text-brand-green font-semibold tracking-wider uppercase text-sm mb-2">¿Quiénes Somos?</h2>
-                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-6">El ADN de nuestro Ministerio</h3>
+                    <h2 class="text-brand-cyan font-semibold tracking-wider uppercase text-sm mb-2">¿Quiénes Somos?</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark mb-6">El ADN de nuestro Ministerio</h3>
                     
                     <div class="prose prose-lg text-gray-600 mb-8">
-                        <p class="font-medium text-gray-800 border-l-4 border-brand-gold pl-4 italic">
+                        <p class="font-medium text-gray-800 border-l-4 border-brand-teal pl-4 italic">
                             "Recorría Jesús todas las ciudades y aldeas, enseñando en las sinagogas, predicando el evangelio del Reino y sanando toda enfermedad y toda dolencia."
                         </p>
                         <p class="mt-4">
@@ -261,33 +291,33 @@ class="scroll-smooth">
     <section id="modelo" class="py-24 bg-brand-light border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <h2 class="text-brand-green font-semibold tracking-wider uppercase text-sm mb-2">Estrategia Integral</h2>
-                <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-4">Nuestro Modelo de Ministerio</h3>
+                <h2 class="text-brand-cyan font-semibold tracking-wider uppercase text-sm mb-2">Estrategia Integral</h2>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark mb-4">Nuestro Modelo de Ministerio</h3>
                 <p class="text-gray-600">Todo esfuerzo ministerial bajo MT9:35 conduce finalmente a la plantación y fortalecimiento de iglesias saludables que impacten su entorno.</p>
             </div>
 
             <!-- Flow Model -->
             <div class="relative py-10" data-aos="fade-up" data-aos-delay="200">
                 <!-- Desktop connecting line -->
-                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue via-brand-green to-brand-gold transform -translate-y-1/2 rounded-full z-0 opacity-20"></div>
+                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-brand-dark via-brand-cyan to-brand-teal transform -translate-y-1/2 rounded-full z-0 opacity-20"></div>
                 
                 <div class="flex flex-col lg:flex-row justify-between items-center gap-8 relative z-10">
                     
                     <!-- Step 1 -->
                     <div class="flex flex-col items-center text-center group w-full lg:w-1/6">
-                        <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-brand-blue group-hover:scale-110 transition-transform duration-300 relative z-10">
-                            <i data-lucide="book-open" class="w-8 h-8 text-brand-blue"></i>
+                        <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-brand-dark group-hover:scale-110 transition-transform duration-300 relative z-10">
+                            <i data-lucide="book-open" class="w-8 h-8 text-brand-dark"></i>
                         </div>
-                        <h4 class="mt-4 font-heading font-bold text-brand-blue">Enseñar</h4>
+                        <h4 class="mt-4 font-heading font-bold text-brand-dark">Enseñar</h4>
                         <p class="text-xs text-gray-500 mt-2 px-2">Capacitación y formación bíblica fundamental.</p>
                     </div>
 
                     <!-- Step 2 -->
                     <div class="flex flex-col items-center text-center group w-full lg:w-1/6">
-                        <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-brand-blue group-hover:scale-110 transition-transform duration-300 relative z-10">
-                            <i data-lucide="mic" class="w-8 h-8 text-brand-blue"></i>
+                        <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-brand-dark group-hover:scale-110 transition-transform duration-300 relative z-10">
+                            <i data-lucide="mic" class="w-8 h-8 text-brand-dark"></i>
                         </div>
-                        <h4 class="mt-4 font-heading font-bold text-brand-blue">Evangelizar</h4>
+                        <h4 class="mt-4 font-heading font-bold text-brand-dark">Evangelizar</h4>
                         <p class="text-xs text-gray-500 mt-2 px-2">Anuncio claro del Evangelio del Reino.</p>
                     </div>
 
@@ -349,8 +379,8 @@ class="scroll-smooth">
     <section id="programas" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <h2 class="text-brand-green font-semibold tracking-wider uppercase text-sm mb-2">Acción en Terreno</h2>
-                <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-4">Nuestros Programas</h3>
+                <h2 class="text-brand-cyan font-semibold tracking-wider uppercase text-sm mb-2">Acción en Terreno</h2>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark mb-4">Nuestros Programas</h3>
                 <p class="text-gray-600">Iniciativas diseñadas para alcanzar diferentes esferas de la sociedad con el mensaje transformador de Jesús.</p>
             </div>
 
@@ -359,11 +389,11 @@ class="scroll-smooth">
                 <!-- Card 1 -->
                 <a href="https://salhoy.github.io/saturacioncaribe/" target="_blank" class="group relative block bg-black rounded-2xl overflow-hidden reveal-card aspect-[4/5]">
                     <img alt="Saturación Caribe" src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 h-full w-full object-cover opacity-60 transition-opacity group-hover:opacity-40" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
                         <div class="translate-y-8 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                             <p class="text-sm text-white mb-4">Movilización masiva de iglesias para saturar la región Caribe con el Evangelio.</p>
-                            <span class="inline-flex items-center text-brand-red text-sm font-bold uppercase tracking-wider">
+                            <span class="inline-flex items-center text-brand-cyan text-sm font-bold uppercase tracking-wider">
                                 Conocer más <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
                             </span>
                         </div>
@@ -374,11 +404,11 @@ class="scroll-smooth">
                 <!-- Card 2 -->
                 <a href="https://salhoy.github.io/escuchalapalabra/" target="_blank" class="group relative block bg-black rounded-2xl overflow-hidden reveal-card aspect-[4/5]">
                     <img alt="Escucha la Palabra" src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 h-full w-full object-cover opacity-60 transition-opacity group-hover:opacity-40" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
                         <div class="translate-y-8 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                             <p class="text-sm text-white mb-4">Grupos de estudio bíblico auditivo para hacer la Palabra accesible a todos.</p>
-                            <span class="inline-flex items-center text-brand-red text-sm font-bold uppercase tracking-wider">
+                            <span class="inline-flex items-center text-brand-cyan text-sm font-bold uppercase tracking-wider">
                                 Conocer más <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
                             </span>
                         </div>
@@ -389,11 +419,11 @@ class="scroll-smooth">
                 <!-- Card 3 -->
                 <a href="https://salhoy.github.io/filmtoday/" target="_blank" class="group relative block bg-black rounded-2xl overflow-hidden reveal-card aspect-[4/5]">
                     <img alt="Film Today" src="https://images.unsplash.com/photo-1485005953046-24fa0e408cd5?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 h-full w-full object-cover opacity-60 transition-opacity group-hover:opacity-40" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
                         <div class="translate-y-8 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                             <p class="text-sm text-white mb-4">Uso de la película JESÚS y recursos audiovisuales para proyectar la esperanza.</p>
-                            <span class="inline-flex items-center text-brand-red text-sm font-bold uppercase tracking-wider">
+                            <span class="inline-flex items-center text-brand-cyan text-sm font-bold uppercase tracking-wider">
                                 Conocer más <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
                             </span>
                         </div>
@@ -404,11 +434,11 @@ class="scroll-smooth">
                 <!-- Card 4 -->
                 <a href="https://salhoy.github.io/clubdecolores/" target="_blank" class="group relative block bg-black rounded-2xl overflow-hidden reveal-card aspect-[4/5]">
                     <img alt="Club de Colores" src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 h-full w-full object-cover opacity-60 transition-opacity group-hover:opacity-40" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
                         <div class="translate-y-8 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                             <p class="text-sm text-white mb-4">Estrategia integral enfocada en el evangelismo y discipulado infantil.</p>
-                            <span class="inline-flex items-center text-brand-red text-sm font-bold uppercase tracking-wider">
+                            <span class="inline-flex items-center text-brand-cyan text-sm font-bold uppercase tracking-wider">
                                 Conocer más <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
                             </span>
                         </div>
@@ -419,7 +449,7 @@ class="scroll-smooth">
 
             <!-- Evangelism & Discipleship Tools -->
             <div class="mt-24" data-aos="fade-up">
-                <h3 class="text-2xl font-heading font-bold text-brand-blue mb-8 text-center">Herramientas de Evangelismo y Discipulado</h3>
+                <h3 class="text-2xl font-heading font-bold text-brand-dark mb-8 text-center">Herramientas de Evangelismo y Discipulado</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Tool 1 -->
                     <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-brand-cyan transition-colors flex flex-col h-full">
@@ -455,35 +485,6 @@ class="scroll-smooth">
                         </div>
                         <p class="text-gray-600 text-sm mb-6 flex-grow">Material de discipulado contextualizado a nuestra cultura, diseñado para forjar el carácter de Cristo en los creyentes locales.</p>
                         <a href="https://salhoy.github.io/Carctercolombiano/" target="_blank" class="text-brand-cyan font-semibold text-sm hover:underline flex items-center mt-auto">Explorar recurso <i data-lucide="external-link" class="w-4 h-4 ml-1"></i></a>
-                    </div>
-                            <h4 class="font-heading font-bold text-lg text-brand-blue">Los Colores</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6 flex-grow">Herramienta visual y didáctica excelente para compartir el plan de salvación de forma sencilla, ideal para niños y contextos informales.</p>
-                        <a href="https://salhoy.github.io/colores/" target="_blank" class="text-brand-green font-semibold text-sm hover:underline flex items-center mt-auto">Explorar recurso <i data-lucide="external-link" class="w-4 h-4 ml-1"></i></a>
-                    </div>
-
-                    <!-- Tool 2 -->
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-brand-green transition-colors flex flex-col h-full">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-brand-blue">
-                                <i data-lucide="signpost" class="w-6 h-6"></i>
-                            </div>
-                            <h4 class="font-heading font-bold text-lg text-brand-blue">El Cruce</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6 flex-grow">Método claro y conciso para presentar el Evangelio, mostrando el puente que Jesús estableció entre Dios y el ser humano.</p>
-                        <a href="https://salhoy.github.io/ElCruce/" target="_blank" class="text-brand-green font-semibold text-sm hover:underline flex items-center mt-auto">Explorar recurso <i data-lucide="external-link" class="w-4 h-4 ml-1"></i></a>
-                    </div>
-
-                    <!-- Tool 3 -->
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-brand-green transition-colors flex flex-col h-full">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-brand-blue">
-                                <i data-lucide="book-heart" class="w-6 h-6"></i>
-                            </div>
-                            <h4 class="font-heading font-bold text-lg text-brand-blue">Carácter Colombiano</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6 flex-grow">Material de discipulado contextualizado a nuestra cultura, diseñado para forjar el carácter de Cristo en los creyentes locales.</p>
-                        <a href="https://salhoy.github.io/Carctercolombiano/" target="_blank" class="text-brand-green font-semibold text-sm hover:underline flex items-center mt-auto">Explorar recurso <i data-lucide="external-link" class="w-4 h-4 ml-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -621,7 +622,7 @@ class="scroll-smooth">
     <section class="py-24 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h3 class="text-3xl font-heading font-bold text-brand-blue">Viendo a Dios Obrar</h3>
+                <h3 class="text-3xl font-heading font-bold text-brand-dark">Viendo a Dios Obrar</h3>
                 <p class="text-gray-600 mt-2">Un vistazo al impacto en las comunidades.</p>
             </div>
             
@@ -629,31 +630,31 @@ class="scroll-smooth">
                 <!-- Using placeholder images that look like mission/church/community contexts -->
                 <div class="masonry-item rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
                     <img src="https://i.postimg.cc/dVbt4S79/evangelismo.jpg" alt="Evangelismo" class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span class="text-white font-semibold">Evangelismo</span>
                     </div>
                 </div>
                 <div class="masonry-item rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
                     <img src="https://i.postimg.cc/6p2pVNQG/IMG-20190830-WA0024.jpg" alt="Comunidad" class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span class="text-white font-semibold">Comunidades</span>
                     </div>
                 </div>
                 <div class="masonry-item rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
                     <img src="https://i.postimg.cc/L4JPCGhp/IMG-20250920-WA0063.jpg" alt="Niños" class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span class="text-white font-semibold">Ministerio Infantil</span>
                     </div>
                 </div>
                 <div class="masonry-item rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
                     <img src="https://i.postimg.cc/cLgL7NJM/20241017-104824.jpg" alt="Capacitación" class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span class="text-white font-semibold">Capacitación de Líderes</span>
                     </div>
                 </div>
                 <div class="masonry-item rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
                     <img src="https://i.postimg.cc/Z5B5Phqc/IMG-20250828-WA0156-(2).jpg" alt="Oración" class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span class="text-white font-semibold">Oración e Intercesión</span>
                     </div>
                 </div>
@@ -661,53 +662,18 @@ class="scroll-smooth">
         </div>
     </section>
 
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Swiper Container -->
-            <div class="swiper testimonialSwiper relative" data-aos="fade-in">
-                <div class="absolute text-brand-gold/10 top-0 left-0 -translate-x-1/4 -translate-y-1/2 text-9xl font-serif">"</div>
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide text-center px-4 md:px-20">
-                        <p class="text-xl md:text-2xl text-gray-700 italic font-light mb-8">"Comenzamos compartiendo El Cruce con nuestros vecinos y hoy tenemos dos grupos en casa multiplicándose. Ver cómo personas sencillas pueden ser usadas por Dios para plantar iglesias es maravilloso."</p>
-                        <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-brand-cyan">
-                                <img src="https://i.pravatar.cc/150?img=32" alt="Testimonio" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-heading font-bold text-brand-teal">Carlos Mendoza</h4>
-                            <p class="text-xs text-gray-500 uppercase tracking-widest">Barranquilla, Atlántico</p>
-                        </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide text-center px-4 md:px-20">
-                        <p class="text-xl md:text-2xl text-gray-700 italic font-light mb-8">"El material de Carácter Colombiano transformó la forma en que hacemos discipulado. Ahora la gente no solo escucha, sino que aplica la Palabra a su contexto diario y enseña a otros."</p>
-                        <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-brand-green">
-                                <img src="https://i.pravatar.cc/150?img=47" alt="Testimonio" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-heading font-bold text-brand-blue">Luz Marina Rojas</h4>
-                            <p class="text-xs text-gray-500 uppercase tracking-widest">Valledupar, Cesar</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination mt-8 relative"></div>
-            </div>
-        </div>
-    </section>
-
     <section id="participa" class="py-24 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <h2 class="text-brand-green font-semibold tracking-wider uppercase text-sm mb-2">Tu lugar en la misión</h2>
-                <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-4">¿Cómo Puedes Participar?</h3>
+                <h2 class="text-brand-cyan font-semibold tracking-wider uppercase text-sm mb-2">Tu lugar en la misión</h2>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark mb-4">¿Cómo Puedes Participar?</h3>
                 <p class="text-gray-600">Hay un lugar para ti en este movimiento. Todos estamos llamados a responder de alguna manera.</p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div class="bg-white p-6 rounded-2xl text-center shadow-sm hover:shadow-md transition-shadow group border border-transparent hover:border-brand-green cursor-pointer">
-                    <i data-lucide="heart" class="w-8 h-8 mx-auto text-gray-400 group-hover:text-brand-green transition-colors mb-3"></i>
-                    <h4 class="font-semibold text-sm text-brand-blue">Orar</h4>
+                <div class="bg-white p-6 rounded-2xl text-center shadow-sm hover:shadow-md transition-shadow group border border-transparent hover:border-brand-teal cursor-pointer">
+                    <i data-lucide="heart" class="w-8 h-8 mx-auto text-gray-400 group-hover:text-brand-teal transition-colors mb-3"></i>
+                    <h4 class="font-semibold text-sm text-brand-dark">Orar</h4>
                 </div>
                 <div class="bg-white p-6 rounded-2xl text-center shadow-sm hover:shadow-md transition-shadow group border border-transparent hover:border-brand-cyan cursor-pointer">
                     <i data-lucide="hand" class="w-8 h-8 mx-auto text-gray-400 group-hover:text-brand-cyan transition-colors mb-3"></i>
@@ -734,13 +700,13 @@ class="scroll-smooth">
     </section>
 
     <section class="relative py-32 bg-call-pattern bg-cover bg-center bg-fixed bg-no-repeat flex items-center justify-center">
-        <div class="absolute inset-0 bg-brand-blue/80 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-brand-dark/80 mix-blend-multiply"></div>
         <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
             <h2 data-aos="zoom-in" class="text-4xl md:text-5xl font-heading font-extrabold text-white mb-6">La mies sigue siendo mucha...</h2>
             <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-gray-200 font-light mb-10 italic">
                 "Entonces dijo a sus discípulos: A la verdad la mies es mucha, mas los obreros pocos. Rogad, pues, al Señor de la mies, que envíe obreros a su mies." <br><span class="text-brand-red font-semibold not-italic text-sm uppercase tracking-widest mt-4 block">- Mateo 9:37-38</span>
             </p>
-            <a href="#contacto" data-aos="fade-up" data-aos-delay="200" class="inline-block bg-brand-red hover:bg-red-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(169,29,36,0.4)]">
+            <a href="https://wa.me/573052908325" target="_blank" data-aos="fade-up" data-aos-delay="200" class="inline-block bg-brand-red hover:bg-red-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(169,29,36,0.4)]">
                 Únete Hoy a la Misión
             </a>
         </div>
@@ -771,11 +737,11 @@ class="scroll-smooth">
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="phone" class="w-5 h-5 text-brand-cyan shrink-0"></i>
-                            <span>+57 304 290 8325</span>
+                            <a href="https://wa.me/573052908325" target="_blank" class="hover:text-brand-cyan transition-colors">+57 305 290 8325</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5 text-brand-cyan shrink-0"></i>
-                            <span>info@ministeriomt935.org</span>
+                            <a href="mailto:saludhoycolombia@gmail.com" class="hover:text-brand-cyan transition-colors">saludhoycolombia@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -783,15 +749,16 @@ class="scroll-smooth">
                 <!-- Quick Form -->
                 <div class="lg:col-span-2 bg-gray-900/50 p-6 rounded-xl border border-gray-800">
                     <h4 class="text-white font-heading font-bold mb-4">Escríbenos</h4>
-                    <form class="grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('¡Gracias por contactarnos! El formulario es de demostración.');">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); const msg = this.querySelector('textarea').value; const name = this.querySelector('input[type=\'text\']').value; window.open(`https://wa.me/573052908325?text=${encodeURIComponent('Hola, soy ' + name + '. ' + msg)}`, '_blank');">
                         <input type="text" placeholder="Tu Nombre" class="bg-gray-800 border border-gray-700 text-white text-sm rounded-lg focus:ring-brand-cyan focus:border-brand-cyan block w-full p-2.5 outline-none" required>
                         <input type="email" placeholder="Tu Correo" class="bg-gray-800 border border-gray-700 text-white text-sm rounded-lg focus:ring-brand-cyan focus:border-brand-cyan block w-full p-2.5 outline-none" required>
                         <textarea placeholder="Mensaje" rows="2" class="bg-gray-800 border border-gray-700 text-white text-sm rounded-lg focus:ring-brand-cyan focus:border-brand-cyan block w-full p-2.5 md:col-span-2 outline-none" required></textarea>
-                        <button type="submit" class="w-full text-white bg-brand-cyan hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-brand-cyan/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:col-span-2 transition-colors">Enviar Mensaje</button>
+                        <button type="submit" class="w-full text-white bg-brand-cyan hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-brand-cyan/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:col-span-2 transition-colors">Enviar por WhatsApp</button>
                     </form>
                 </div>
             </div>
 
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-xs text-gray-500">© 2026 Ministerio MT9:35. Una iniciativa apoyada por Fundación Social Salud Hoy.</p>
                 <div class="flex items-center gap-2">
@@ -802,8 +769,14 @@ class="scroll-smooth">
         </div>
     </footer>
 
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573052908325" target="_blank" class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize Icons
@@ -814,21 +787,6 @@ class="scroll-smooth">
                 duration: 800,
                 once: true,
                 offset: 100,
-            });
-
-            // Initialize Swiper for Testimonials
-            const swiper = new Swiper('.testimonialSwiper', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
             });
 
             // Navbar Scroll Effect
@@ -853,41 +811,6 @@ class="scroll-smooth">
             menu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => menu.classList.add('hidden'));
             });
-
-            // Number Counter Animation Logic
-            const counters = document.querySelectorAll('.counter');
-            let hasAnimated = false;
-
-            const animateCounters = () => {
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    const duration = 2000; // 2 seconds
-                    const increment = target / (duration / 16); // 60fps
-
-                    let current = 0;
-                    const updateCounter = () => {
-                        current += increment;
-                        if (current < target) {
-                            counter.innerText = Math.ceil(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCounter();
-                });
-            };
-
-            // Intersection Observer to trigger counter animation
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting && !hasAnimated) {
-                    animateCounters();
-                    hasAnimated = true;
-                }
-            }, { threshold: 0.5 });
-
-            const impactSection = document.getElementById('impacto');
-            if(impactSection) observer.observe(impactSection);
         });
     </script>
 </body>
